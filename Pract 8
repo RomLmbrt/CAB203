@@ -1,0 +1,16 @@
+V = [a,b,c,d,e]
+E=[(a,b),(b,c),(b,d),(c,d),(d,e),(c,e)]
+
+def parents(V,E,u):
+    result =[]
+    for v in V :
+        for e in E : 
+            if (u,v)==e or (v,u)==e:
+                result+=v
+    return(result)
+
+def bfs(V,E,u,v):
+    queue = [parents(V,E,u)]
+    visited = []
+    while queue != [] :
+        
