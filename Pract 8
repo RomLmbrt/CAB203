@@ -13,4 +13,9 @@ def bfs(V,E,u,v):
     queue = [parents(V,E,u)]
     visited = []
     while queue != [] :
+        n = queue[0]
+        visited+=n
+        for z in parents(V,E,n):
+            if z not in visited:
+                queue+=z
         
